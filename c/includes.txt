@@ -1,0 +1,18 @@
+/************************************************************************\
+*		Quantum Design and Engineering (PTY) Ltd
+*		www.qde.co.za	
+*		Updated 24-08-2019
+*
+*		Standard Includes
+*
+\************************************************************************/
+//
+//
+#include <stdio.h>
+
+// example  printf( "Book book_id : %d\n", book.book_id); or printf("hello");
+
+
+#include <string.h>
+
+// example  strcpy( book.title, "C Programming");

@@ -1,0 +1,11 @@
+First, create your splash screen as a borderless, immovable form with your image on it, set to initially display at the center of the screen, colored the way you want. All of this can be set from within the designer; specifically, you want to:
+
+Set the form's ControlBox, MaximizeBox, MinimizeBox and ShowIcon properties to "False"
+Set the StartPosition property to "CenterScreen"
+Set the FormBorderStyle property to "None"
+Set the form's MinimumSize and MaximumSize to be the same as its initial Size.
+Then, you need to decide where to show it and where to dismiss it. These two tasks need to occur on opposite sides of the main startup logic of your program. This could be in your application's main() routine, or possibly in your main application form's Load handler; wherever you're creating large expensive objects, reading settings from the hard drive, and generally taking a long time to do stuff behind the scenes before the main application screen displays.
+
+Then, all you have to do is create an instance of your form, Show() it, and keep a reference to it while you do your startup initialization. Once your main form has loaded, Close() it.
+
+If your splash screen will have an animated image on it, the window will need to be "double-buffered" as well, and you will need to be absolutely sure that all initialization logic happens outside the GUI thread (meaning you cannot have your main loading logic in the mainform's Load handler; you'll have to create a BackgroundWorker or some other threaded routine.

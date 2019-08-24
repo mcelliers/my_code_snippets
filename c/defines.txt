@@ -1,0 +1,46 @@
+/************************************************************************\
+*		Quantum DEsign and Engineering (PTY) Ltd
+*		www.qde.co.za	
+*		Updated 24-08-2019
+*
+*		Defines is a PREPROCESSOR Directive.
+*		This means that the defines get replaced with the define value
+*		on the first step of compiling
+* 		Macros can also be written in defines
+\************************************************************************/
+
+
+#define TRUE  1
+#define FALSE 0
+
+#define BUFFER_SIZE 1024
+
+// The macro’s body ends at the end of the ‘#define’ line. 
+// You may continue the definition onto multiple lines, 
+// if necessary, using backslash-newline.
+//
+// Example :
+#define NUMBERS 1, \
+                2, \
+                3
+int x[] = { NUMBERS };
+     ? int x[] = { 1, 2, 3 };
+
+
+
+//you can also use #undef to undefine something
+#define  AGE  35
+#undef   AGE
+
+/*--------------------------------------------------------*\
+|
+|   		FUNCTION LIKE MACROS
+|		? == then
+|		: == esle
+\*--------------------------------------------------------*/
+
+// macro that computes the minimum of two numeric values
+#define min(X, Y)  ((X) < (Y) ? (X) : (Y))
+3define max(X, Y)  ((X) > (Y) ? (X) : (Y))
+
+

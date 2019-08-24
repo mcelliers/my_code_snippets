@@ -1,0 +1,4 @@
+If you're using [System.Threading.Timer] or [System.Timers.Timer], 
+the timer will tick again, starting a new thread. See https://stackoverflow.com/a/10442117/56778 for a way to avoid that problem.
+
+If you're using [System.Windows.Forms.Timer], then a new tick won't occur until the previous one is finished processing.

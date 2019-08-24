@@ -1,0 +1,10 @@
+How to enable Developer options in Android
+If using stock Android, go to Settings > About phone > Build number. 
+
+On a Samsung Galaxy device, go to 
+
+Settings > About device > Build number. ...
+
+Tap Build number seven times. ...
+
+Go back to Settings, where you'll find a Developer options entry in the menu.

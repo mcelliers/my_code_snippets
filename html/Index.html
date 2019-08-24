@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<title>QDE PROJECTS</title>
+	<script>
+		function myFunction() 
+			{
+			 document.getElementById("myNote").innerHTML = "Paragraph changed.";
+			}
+	
+		function closeBlackdiv() 
+			{
+				var blackdiv, stylediv;
+				blackdiv = document.getElementById("blackdiv")
+				blackdiv.parentNode.removeChild(blackdiv);
+				stylediv = document.getElementById("stylediv")
+				stylediv.parentNode.removeChild(stylediv);
+			}
+	
+		function showStyle() 
+			{
+				var div, text, blackdiv;
+				blackdiv = document.createElement("DIV");
+				blackdiv.setAttribute("style","background-color:#000000;position:absolute;width:100%;height:100%;top:0;opacity:0.5;margin-left:-20px;");
+				blackdiv.setAttribute("id","blackdiv");
+				blackdiv.setAttribute("onclick","closeBlackdiv()");
+				document.body.appendChild(blackdiv);
+				div = document.createElement("DIV");
+				div.setAttribute("id","stylediv");
+				div.setAttribute("style","background-color:#ffffff;padding-left:5px;position:absolute;width:auto;height:auto;top:100px;bottom:50px;left:200px;right:200px;overflow:auto;font-family: monospace; white-space: pre;line-height:16px;");
+				text = document.createTextNode("Popup Documentation"); //document.createTextNode(document.getElementsByTagName("STYLE")[n].innerHTML);
+				div.appendChild(text);
+				document.body.appendChild(div);
+				alert(document.getElementsByTagName("STYLE")[n].innerHTML);
+				alert("Hello Marius. The Code Did execute");
+			}
+	
+		function showSearch()
+			{
+				var searchform;
+				searchform = document.getElementById("SearchCell");
+				searchform.style.display = 'inline'
+				//searchform.setAttribute("class", "visible");
+				//searchform.setAttribute("hidden","false");
+			}
+
+		function hideSearch()
+			{
+				var searchform;
+				searchform = document.getElementById("SearchCell");
+				searchform.style.display = 'none'	
+			}
+	
+	
+	
+	</script>
+	<script src="index.js"></script>
+</head>
+
+
+<body>
+
+
+<div class="container wrapper">
+	<div id="top">
+		<h1>Quantum Design and Engineering (Pty) Ltd</h1>
+		<p>Projects Folder</p>
+	</div>
+	<div class="wrapper">
+		<div id="menubar">
+			<ul id="menulist">
+					<li class="menuitem" onclick="showSearch()">Quotes Sent</li>
+					<li class="menuitem" onclick="reStyle(3)">Project Folders</li>
+					<li class="menuitem" onclick="reStyle(3)">Project Planning</li>
+					<li class="menuitem" onclick="reStyle(3)">STORES and STOCK</li>
+					<li class="menuitem" onclick="hideSearch()">Datasheets</li>
+					<li class="menuitem" onclick="reStyle(2)">Comapny Info</li>
+					<li class="menuitem" onclick="showStyle()">Downloads</li>
+			</ul>
+		</div>
+		
+		<div id="main">
+			  <h1>Network Management Page</h1>
+			  <p>
+				This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
+				
+			  </p>
+				<div id="AddCell" hidden="true">
+				<form action="Cell Add.asp" method="get">
+					First name: <input type="text" name="fname"><br>
+					Last name:  <input type="text" name="lname"><br>
+					Cell Number <input type="text" name="lname"><br>
+					<input type="submit" value="Add Request">
+				</form>
+				</div>
+				<div id="SearchCell" hidden="true">
+			   <h2>Search Cell Number</h2>
+					<form action="SearchCell.php" method="get">
+							Cell Number: <input type="text" name="fname"><br>
+							<input type="submit" value="Search">
+					</form>
+			  <p>
+				This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:<br><a href="#" onclick="noStyles();return false">No Stylesheet</a>.
+			  </p>
+			  <h2>View Stylesheets</h2>
+			  <p>
+				The stylesheets uses CSS syntax to layout the HTML page. Take a look at the stylesheets used in this demonstration:<br>
+				<a href="#" onclick="showStyle(0);return false">Stylesheet1</a>,
+				<a href="#" onclick="showStyle(1);return false">Stylesheet2</a>,
+				<a href="#" onclick="showStyle(2);return false">Stylesheet3</a>,
+				<a href="#" onclick="showStyle(3);return false">Stylesheet4</a>.
+			  </p>
+	   </div>
+	
+		<div id="sidebar">
+			  <h3>Notes:</h3>
+			  <p id="myNote">
+				On This Page you Can select the parts you want to Configure, test or monitor
+				<button type="button" onclick="myFunction()">Click Me!</button>
+			  </p>
+		</div>
+
+	</div>	
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

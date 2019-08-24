@@ -1,0 +1,57 @@
+/************************************************************************\
+*		Quantum Design and Engineering (PTY) Ltd
+*		www.qde.co.za	
+*		Updated 24-08-2019
+*
+*		TYPEDEF	
+\************************************************************************/
+// To create your own type :
+// Create types to make it quicker to create variables
+
+typedef unsigned char BYTE;
+
+typedef unsigned char uint8_t;
+
+typedef unsigned short uint16_t;
+
+typedef unsigned int uint16_t;
+
+typedef unsigned long uint64_t;
+
+// USAGE sample
+
+uint8_t myVar;
+myVar = 123;
+
+//-------------------------------------------------------------
+//				TYPEDEF OF STRUCTURES
+//-------------------------------------------------------------
+
+typedef struct Employees
+{
+   char name[50];
+   char email[50];
+   char company[100];
+   int  age;
+   int employee_id;
+} Employee;
+
+// USAGE sample
+
+void main()
+{
+  Employee employee;  // create the object
+  // pass the values
+  strcpy( employee.name, "Marius");
+  strcpy( employee.email, "marius.celliers@gmail.com");
+  strcpy( employee.company, "Quantum Design and Enginnering");
+  employee.age = 35;
+  employee.employee_id = 2;
+
+  printf( "Name : %s\r\n", employee.name);
+  printf( "Email : %s\r\n", employee.email);
+  printf( "Company : %s\r\n", employee.company);
+  printf( "Age : %s\r\n", employee.age);
+  printf( "Emplayee ID : %s\r\n", employee.employee_id);
+
+}

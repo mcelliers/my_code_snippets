@@ -1,0 +1,74 @@
+/************************************************************************\
+*		Quantum Design and Engineering (PTY) Ltd
+*		www.qde.co.za	
+*		Updated 24-08-2019
+*
+*		TYPES
+*
+\************************************************************************/
+
+// Characters 
+// [ 1-byte ]
+// Values -128 to 127
+char myVar
+
+// Unsigned Characters  
+// [ 1-byte ]
+// Values 0 to 255
+unsigned char myVar
+
+// Integers  
+// [2 or 4 bytes]
+// Values {-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647}
+int myVar
+
+// Unsigned Integers  
+// [2 or 4 bytes]
+// Values {0 to 65,535 or 0 to 4,294,967,295}
+int myVar
+
+// short 
+// [2 Bytes]
+// Values {-32,768 to 32,767}
+short myVar
+
+// unsigned short 
+// [2 Bytes]
+// Values {0 to 65,535}
+unsigned short myVar
+
+// long  
+// [ 8-bytes ]
+// Values {-9223372036854775808 to 9223372036854775807}
+long myVar
+
+// unsigned long  
+// [ 8-bytes ]
+// Values {0 to 18446744073709551615}
+unsigned longmyVar
+
+//Void (Represents the absence of type.)
+void
+
+/*==================================================*\
+|
+|		Floating-Point Types
+|
+\*==================================================*/
+//Floating Point (A single-precision floating point value.)
+// [4 bytes]
+// Precision {6 Decimal Places}
+float myVar
+
+//double myVar
+// [8 bytes]
+// Precision {15 Decimal Places}
+double myVar
+
+//long double 
+// [10 bytes]
+// Precision {19 Decimal Places}
+long double 
+
+
+
