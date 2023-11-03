@@ -1,0 +1,10 @@
+<ListView ItemsSource="{x:Bind ViewModel.Recordings}">
+    <ListView.ItemTemplate>
+        <DataTemplate x:Name="SingleLineDataTemplate" x:DataType="local:Recording">
+            <StackPanel Orientation="Horizontal" Height="44" Padding="12" AutomationProperties.Name="{x:Bind CompositionName}">
+                <Image Source="Placeholder.png" Height="16" Width="16" VerticalAlignment="Center"/>
+                <TextBlock Text="{x:Bind CompositionName}" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>

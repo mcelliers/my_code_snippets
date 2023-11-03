@@ -1,0 +1,53 @@
+/***************************************************************************************************************************\
+*                                          <CLASS> RelayCommand <CLASS>   
+*                                                      CLASS    
+*  CLASS   AppConfiguration
+*  Created 2020-11-28
+*  Marius Celliers  ( Copyright Quantum Design and Engineering (PTY) Ltd. 2014 )
+*  Description :    Static Class for the configuration of the Application
+* 
+*  Updated by ................ On ..............
+*  Changes Made  ...............................  
+* 
+*  Updated by ................ On ..............
+*  Changes Made  ...............................  
+*/
+// Implementation :: var cmd1 = new RelayCommand(o => { /* do something 1 */ }, o => true);  
+/* 
+\***************************************************************************************************************************/
+using System;
+using System.Diagnostics;
+using System.Windows.Input;
+
+namespace MVVMDEmo.Commands
+{
+
+    public class RelayCommand : ICommand
+    {
+        private Action<object> execute;
+        private Func<object, bool> canExecute;
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return this.canExecute == null || this.canExecute(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            Debug.WriteLine("DEBUG:: Relay Command Executed");
+            this.execute(parameter);
+        }
+    }
+}

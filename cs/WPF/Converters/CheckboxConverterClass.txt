@@ -1,0 +1,20 @@
+   public class CheckBoxConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+
+            bool IsChecked = false;
+            if (value is bool)
+            {
+                IsChecked = (bool)value;
+            }
+
+
+            return IsChecked;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+                return false;
+        }
+    }
