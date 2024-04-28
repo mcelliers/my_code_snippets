@@ -1,0 +1,49 @@
+To Add Comments to Your Classes Add the Collowing to the top of your code To Describe your Class
+
+    /***************************************************************************************************************************\
+    *                                          <CLASS> Name_Of_Your_Class <CLASS>   
+    *  Description  :   Description of your Class
+    *  Created By   :  2016-08-10
+    *  Name         :  Marius Celliers  ( Copyright Quantum Design and Engineering (PTY) Ltd. 2014 )
+    *  
+    *   Date Modified :
+    *   Modified by   :
+    *   Modifications Made :
+    * 
+   \***************************************************************************************************************************/
+
+
+Place Regions in your Code to make it read easier:
+( Some examples for MVVM Applications)
+
+#region CONSTRUCTOR_DESTRUCTOR
+
+#endregion
+
+#region EVENTS_AND_DELEGATES
+
+#endregion
+
+#region PRIVATE_VARIABLES
+
+#endregion
+
+#region PUBLIC_PROPPERTIES
+
+#endregion
+
+#region PUBLIC_PROPPERTIES
+
+#endregion
+
+#region RELAY_COMMANDS
+
+#endregion
+
+#region CRUD_OPERATIONS
+
+#endregion
+
+#region PRIVATE_FUNCTIONS
+
+#endregion
