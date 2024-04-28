@@ -1,0 +1,51 @@
+Create the Following Folders in your Project:
+
+      \Models
+      \ViewModels
+      \Views
+      \Commands
+      \Resources
+      \Resources\Styles
+
+in ViewModels folder, create a class and Call it MainWindowViewModel.cs  (Or the Same name as your startup Window Name + ViewModel as suffix)
+
+In App.xaml remove ApplicationUrl from the application Header
+
+Then Go To App.Xaml.cs
+Create a constructor in the class so your class should look like this :
+
+
+---------------------------------------------------code---------------------------------------------------------------
+    MainWindow main;
+    MainWindowViewModel mv;
+
+    public App()
+    {
+        main = new MainWindow();
+        mv = new MainWindowViewModel(); // or //  new MainWindowViewModel(main);
+        main.DataContext = mv
+        main.Show();
+    }
+----------------------------------------------------------------------------------------------------------------------
+
+
+In Resources Filder create the Following Resource Dictionaries:
+
+ApplicationViews.xaml   -- In \Resources\Styles Folder
+ButtonStyles.xaml    -- in \Resources\Styles Folder
+TextStyles.xaml      -- in \Resources\Styles Folder
+
+
+In App.xaml Add your resources 
+---------------------------------------------------code---------------------------------------------------------------
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles/TextStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ApplicationViews.xaml"/> 
+                <!--   ApplicationViews Links ViewModels to Views as DataTemplates -->
+                <ResourceDictionary Source="/Resources/Styles/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+----------------------------------------------------------------------------------------------------------------------
