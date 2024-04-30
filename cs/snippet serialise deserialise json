@@ -1,0 +1,24 @@
+/***************************************************************************************************************\
+* Quantum Design and Engineering (PTY) Ltd
+* 2024-04-30
+*                                    Deserialise JSON Data into Class
+                                      Serialize Class to Json
+*                                    --------------------
+*                              Loads the XML File into the Devices list
+\***************************************************************************************************************/
+
+// You will need to import the following in your class:
+
+using Newtonsoft.Json;
+using System.IO;
+using System.Xml.Serialization;
+
+    public static T JsonDeserialize<T>(this string toDeserialize)
+    {
+        return JsonConvert.DeserializeObject<T>(toDeserialize);
+    }
+
+    public static string JsonSerialize<T>(this T toSerialize)
+    {
+        return JsonConvert.SerializeObject(toSerialize);
+    }
